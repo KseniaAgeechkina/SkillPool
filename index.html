@@ -10,12 +10,10 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- ШАПКА -->
   <header class="header">
     <div class="container header__inner">
       <a href="#" class="logo">
         <img src="image/logo.svg" alt="SkillPool" class="logo__img" />
-        <span class="logo__text">SkillPool</span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
@@ -33,59 +31,62 @@
   </header>
 
   <main>
-    <!-- БЛОК 1: ГЕРОЙ (МИССИЯ) -->
     <section class="hero" id="mission">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__title">Твой первый заказ<br />ближе, чем кажется</h1>
+         <h1 class="hero__title">
+ Твой первый заказ<br />
+  <span class="hero__word-outline">
+    ближе
+    <img src="image/outline.svg" alt="" class="hero__outline-img" />
+  </span>, чем кажется
+</h1>
           <p class="hero__subtitle">
             Развивайте навыки на реальных кейсах,<br />
             получайте поддержку и двигайтесь вперёд.
           </p>
-          <a href="#" class="btn btn-primary">Скачать PDF</a>
+          <a href="#" class="btn btn-primary">Скачать приложение</a>
         </div>
       </div>
 
-      <!-- Волны + хаотичные карточки -->
       <div class="waves-wrapper">
-        <!-- Задняя волна -->
         <div class="wave-layer wave-layer--back">
           <img src="image/wave1.svg" alt="Волна" />
         </div>
-
-        <!-- 5 карточек с разным наклоном и позицией -->
         <div class="wave-card card1">Дизайн</div>
         <div class="wave-card card2">Кейсы</div>
         <div class="wave-card card3">ИИ-бот</div>
         <div class="wave-card card4">Тесты</div>
         <div class="wave-card card5">Дедлайн</div>
-
-        <!-- Средняя волна -->
         <div class="wave-layer wave-layer--middle">
           <img src="image/wave2.svg" alt="Волна" />
         </div>
-
-        <!-- Передняя волна -->
         <div class="wave-layer wave-layer--front">
           <img src="image/wave3.svg" alt="Волна" />
         </div>
       </div>
     </section>
 
-    <!-- БЛОК 2: МИССИЯ (фон #0B148E) -->
     <section class="mission-block" id="growth">
-      <div class="container">
-        <h2 class="mission-title">Застряли между обучением и реальной работой?</h2>
-        <p class="mission-subtitle">Переход от учебных проектов к реальным клиентам часто кажется слишком резким.</p>
-        <p class="mission-subtitle mission-subtitle--accent">СкиллПулл делает этот путь понятным!!</p>
+      <div class="container mission-grid">
+        <div class="mission-left">
+          <h2 class="mission-title">Застряли между обучением<br />и реальной работой?</h2>
+          <p class="mission-subtitle">Переход от учебных проектов к реальным клиентам часто кажется слишком резким.</p>
+        </div>
+        <div class="mission-right">
+          <p class="mission-accent">СкиллПулл делает этот путь понятным!!</p>
+        </div>
+      </div>
 
+      <div class="container">
         <div class="mission-cards">
-          <!-- Карточка 1 (открытая) -->
+          <!-- Карточка 1 -->
           <div class="flip-card mission-flip">
             <div class="flip-card__inner">
               <div class="flip-card__front">
-                <h3>Чёткий маршрут от теории к первым кейсам</h3>
-                <p>Пошаговый путь от первых шагов и подсказок до уверенного владения навыками.</p>
+                <h3>Чёткий маршрут <br />от теории к первым кейсам</h3>
+                <div class="card-divider"></div>
+                <p class="card-description">Пошаговый путь от первых шагов <br />и подсказок до уверенного владения навыками.</p>
               </div>
               <div class="flip-card__back" style="background-image: url('image/pattern.png');"></div>
             </div>
@@ -94,8 +95,9 @@
           <div class="flip-card mission-flip flip-card--flipped">
             <div class="flip-card__inner">
               <div class="flip-card__front">
-                <h3>Чёткий маршрут от теории к первым кейсам</h3>
-                <p>Пошаговый путь от первых шагов и подсказок до уверенного владения навыками.</p>
+                <h3>Портфолио и уверенность <br />уже после первых заданий</h3>
+                <div class="card-divider"></div>
+                <p class="card-description">Реальные проекты и обратная связь<br /> помогают собрать портфолио и привлекают клиентов.</p>
               </div>
               <div class="flip-card__back" style="background-image: url('image/pattern.png');"></div>
             </div>
@@ -104,7 +106,7 @@
       </div>
     </section>
 
-    <!-- БЛОК 3: РОСТ -->
+    <!-- Остальные блоки без изменений -->
     <section class="growth-block" id="growth-detail">
       <div class="container">
         <h2 class="section-title">Растите как настоящий дизайнер – шаг за шагом</h2>
@@ -122,7 +124,6 @@
       </div>
     </section>
 
-    <!-- БЛОК 4: СТАТИСТИКА -->
     <section class="stats" id="stats">
       <div class="container stats__grid">
         <div class="stats__item">
@@ -140,7 +141,6 @@
       </div>
     </section>
 
-    <!-- БЛОК 5: ИНСТРУМЕНТЫ (аккордеон) -->
     <section class="tools" id="tools">
       <div class="container">
         <h2 class="section-title">Все, что нужно для работы в твоём приложении</h2>
@@ -187,7 +187,6 @@
       </div>
     </section>
 
-    <!-- БЛОК 6: СВЯЗЬ (уточка) -->
     <section class="contact" id="contact">
       <div class="container contact-container">
         <div class="contact-duck">
@@ -202,7 +201,6 @@
     </section>
   </main>
 
-  <!-- ПОДВАЛ -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__info">
