@@ -200,7 +200,7 @@ section:last-of-type {
   font-weight: 700;
   font-size: 1.1rem;
   box-shadow: 0 8px 28px rgba(11, 20, 142, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
   cursor: default;
   pointer-events: auto;
   white-space: nowrap;
@@ -224,10 +224,10 @@ section:last-of-type {
   z-index: 4;
 }
 .card4 {
-  left: 61%;           /* ← теперь левее, чем card5 (у которой 79%) */
+  left: 61%;
   bottom: 44%;
   transform: rotate(-5deg);
-  z-index: 2;          /* ← теперь на одном уровне с card1, card2 */
+  z-index: 2;
 }
 .card5 {
   left: 79%;
@@ -524,12 +524,28 @@ section:last-of-type {
 }
 
 /* ========== АДАПТИВ ========== */
+
+/* БОЛЬШИЕ ЭКРАНЫ (1366px) – лёгкое смещение вниз */
 @media (max-width: 1366px) {
   .container { max-width: 1100px; }
+  .card1 { transform: translateY(35px) rotate(-8deg); }
+  .card2 { transform: translateY(35px) rotate(6deg); }
+  .card3 { transform: translateY(30px) rotate(7deg); }
+  .card4 { transform: translateY(35px) rotate(-5deg); }
+  .card5 { transform: translateY(30px) rotate(4deg); }
 }
+
+/* СРЕДНИЕ (1194px) – больше смещение */
 @media (max-width: 1194px) {
   .mission-cards { grid-template-columns: 1fr 1fr; }
+  .card1 { transform: translateY(50px) rotate(-8deg); }
+  .card2 { transform: translateY(50px) rotate(6deg); }
+  .card3 { transform: translateY(30px) rotate(7deg); }
+  .card4 { transform: translateY(50px) rotate(-5deg); }
+  .card5 { transform: translateY(40px) rotate(4deg); }
 }
+
+/* ПЛАНШЕТЫ (834px) – ещё ниже */
 @media (max-width: 834px) {
   .nav {
     display: none;
@@ -553,17 +569,32 @@ section:last-of-type {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
-  .card1 { left: 5%; bottom: 40%; }
-  .card2 { left: 25%; bottom: 50%; }
-  .card3 { left: 45%; bottom: 35%; }
-  .card4 { left: 65%; bottom: 55%; }
-  .card5 { left: 82%; bottom: 42%; }
+  .card1 { transform: translateY(90px) rotate(-8deg); }
+  .card2 { transform: translateY(90px) rotate(6deg); }
+  .card3 { transform: translateY(60px) rotate(7deg); }
+  .card4 { transform: translateY(70px) rotate(-5deg); }
+  .card5 { transform: translateY(70px) rotate(4deg); }
 
   .mission-cards { grid-template-columns: 1fr; }
   .contact-container { flex-direction: column; text-align: center; }
   .footer__inner { flex-direction: column; align-items: center; text-align: center; }
   .form-row { justify-content: center; }
 }
+
+/* МАЛЕНЬКИЕ (600px) – ещё глубже */
+@media (max-width: 600px) {
+  .wave-card {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+  .card1 { transform: translateY(110px) rotate(-8deg); }
+  .card2 { transform: translateY(110px) rotate(6deg); }
+  .card3 { transform: translateY(80px) rotate(7deg); }
+  .card4 { transform: translateY(90px) rotate(-5deg); }
+  .card5 { transform: translateY(90px) rotate(4deg); }
+}
+
+/* САМЫЕ МАЛЕНЬКИЕ (375px) – максимальное опускание */
 @media (max-width: 375px) {
   .container { padding: 0 16px; }
   .hero__title { font-size: 2rem; }
@@ -572,11 +603,11 @@ section:last-of-type {
     font-size: 0.75rem;
     padding: 6px 12px;
   }
-  .card1 { left: 2%; bottom: 35%; }
-  .card2 { left: 22%; bottom: 45%; }
-  .card3 { left: 42%; bottom: 30%; }
-  .card4 { left: 62%; bottom: 50%; }
-  .card5 { left: 78%; bottom: 38%; }
+  .card1 { transform: translateY(130px) rotate(-8deg); }
+  .card2 { transform: translateY(130px) rotate(6deg); }
+  .card3 { transform: translateY(90px) rotate(7deg); }
+  .card4 { transform: translateY(100px) rotate(-5deg); }
+  .card5 { transform: translateY(100px) rotate(4deg); }
 
   .stats__grid { grid-template-columns: 1fr; }
   .tools__grid { grid-template-columns: 1fr 1fr; }
