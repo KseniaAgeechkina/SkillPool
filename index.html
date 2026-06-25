@@ -31,16 +31,17 @@
   </header>
 
   <main>
+    <!-- ГЕРОЙ -->
     <section class="hero" id="mission">
       <div class="container">
         <div class="hero__content">
-         <h1 class="hero__title">
- Твой первый заказ<br />
-  <span class="hero__word-outline">
-    ближе
-    <img src="image/outline.svg" alt="" class="hero__outline-img" />
-  </span>, чем кажется
-</h1>
+          <h1 class="hero__title">
+            Твой первый заказ<br />
+            <span class="hero__word-outline">
+              ближе
+              <img src="image/outline.svg" alt="" class="hero__outline-img" />
+            </span>, чем кажется
+          </h1>
           <p class="hero__subtitle">
             Развивайте навыки на реальных кейсах,<br />
             получайте поддержку и двигайтесь вперёд.
@@ -67,6 +68,7 @@
       </div>
     </section>
 
+    <!-- МИССИЯ -->
     <section class="mission-block" id="growth">
       <div class="container mission-grid">
         <div class="mission-left">
@@ -80,7 +82,6 @@
 
       <div class="container">
         <div class="mission-cards">
-          <!-- Карточка 1 -->
           <div class="flip-card mission-flip">
             <div class="flip-card__inner">
               <div class="flip-card__front">
@@ -91,7 +92,6 @@
               <div class="flip-card__back" style="background-image: url('image/pattern.png');"></div>
             </div>
           </div>
-          <!-- Карточка 2 (закрытая, с паттерном) -->
           <div class="flip-card mission-flip flip-card--flipped">
             <div class="flip-card__inner">
               <div class="flip-card__front">
@@ -106,41 +106,82 @@
       </div>
     </section>
 
-    <!-- Остальные блоки без изменений -->
+    <!-- РОСТ (слайдер) -->
     <section class="growth-block" id="growth-detail">
       <div class="container">
-        <h2 class="section-title">Растите как настоящий дизайнер – шаг за шагом</h2>
-        <p class="section-desc">Без хаоса, случайных туртировок и выгорания.</p>
-        <div class="growth-grid">
-          <div class="growth-item">
-            <h3>Четкие сроки в комфорте</h3>
-            <p>Найдите свои слабые места</p>
+        <div class="growth-header">
+          <h2 class="section-title">Растите как настоящий <br /> дизайнер – шаг за шагом</h2>
+          <p class="section-desc">Без хаоса, случайных туториалов и выгорания.</p>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-track" id="growthSliderTrack">
+            <div class="growth-card">
+              <img src="image/icon1.svg" alt="Сроки" class="growth-icon" />
+              <p>Четкие сроки в комфорте</p>
+            </div>
+            <div class="growth-card">
+              <img src="image/icon2.svg" alt="Слабые места" class="growth-icon" />
+              <p>Найдите свои слабые места</p>
+            </div>
+            <div class="growth-card">
+              <img src="image/icon3.svg" alt="Знания" class="growth-icon" />
+              <p>Только самые нужные знания</p>
+            </div>
+            <div class="growth-card">
+              <img src="image/icon4.svg" alt="Риск" class="growth-icon" />
+              <p>Тренируйтесь без риска</p>
+            </div>
+            <div class="growth-card">
+              <img src="image/icon5.svg" alt="Поддержка" class="growth-icon" />
+              <p>Поддержка 24/7</p>
+            </div>
+            <div class="growth-card">
+              <img src="image/icon6.svg" alt="Проекты" class="growth-icon" />
+              <p>Реальные проекты</p>
+            </div>
           </div>
-          <div class="growth-item">
-            <h3>Только самые нужные знания</h3>
-            <p>Тренируйтесь без риска</p>
-          </div>
+
+          <button class="slider-btn slider-btn--prev" id="growthPrev">‹</button>
+          <button class="slider-btn slider-btn--next" id="growthNext">›</button>
         </div>
       </div>
     </section>
 
+    <!-- СТАТИСТИКА -->
     <section class="stats" id="stats">
-      <div class="container stats__grid">
-        <div class="stats__item">
-          <span class="stats__number">97%</span>
-          <p>Столько дизайнеров начинают понимать, почему их работы выглядят непрофессионально</p>
-        </div>
-        <div class="stats__item">
-          <span class="stats__number">50+</span>
-          <p>Реальных кейсов для тренировки. Практика на живых задачах. Рост навыков без лишних слов.</p>
-        </div>
-        <div class="stats__item">
-          <span class="stats__number">24/7</span>
-          <p>ИИ-помощник всегда на связи, получите мгновенный фидбэк, когда вам это нужно.</p>
+      <div class="container">
+        <h2 class="stats-title">Твой рост начинается здесь!</h2>
+        <div class="stats__grid">
+          <div class="stats__item">
+            <span class="stats__number">97%</span>
+            <p>
+              Столько дизайнеров начинают<br>
+              понимать, почему их работы<br>
+              выглядят непрофессионально
+            </p>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">50+</span>
+            <p>
+              Реальных кейсов для тренировки.<br>
+              Практика на живых задачах.<br>
+              Рост навыков без лишних слов.
+            </p>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">24/7</span>
+            <p>
+              ИИ-помощник всегда на связи,<br>
+              получите мгновенный фидбэк,<br>
+              когда вам это нужно.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ИНСТРУМЕНТЫ -->
     <section class="tools" id="tools">
       <div class="container">
         <h2 class="section-title">Все, что нужно для работы в твоём приложении</h2>
@@ -187,6 +228,7 @@
       </div>
     </section>
 
+    <!-- СВЯЗЬ (уточка) -->
     <section class="contact" id="contact">
       <div class="container contact-container">
         <div class="contact-duck">
@@ -201,19 +243,35 @@
     </section>
   </main>
 
+  <!-- ПОДВАЛ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__info">
-        <p>© 2026 SkillPool. Все права защищены.</p>
-        <p>Оставляйте свою почту! Будем делиться крутыми кейсами, лайфхаками и новостями. Без спама.</p>
+      <div class="footer__left">
+        <img src="image/logo-white.svg" alt="SkillPool" class="footer__logo" />
+        <p class="footer__copyright">© 2026 SkillPool. Все права защищены.</p>
       </div>
-      <form class="footer__form" id="subscribeForm">
-        <label for="email">Ваш имейл адрес:</label>
-        <div class="form-row">
-          <input type="email" id="email" placeholder="example@mail.com" required />
+      <div class="footer__right">
+        <h3 class="footer__title">Оставляйте свою почту!!</h3>
+        <p class="footer__desc">
+          Будем делиться крутыми кейсами, лайфхаками и новостями.<br />
+          Без спама, только то, что действительно пригодится в работе.
+        </p>
+        <form class="footer__form" id="subscribeForm">
+          <input type="email" id="email" placeholder="Ваш имейл адрес:" required />
           <button type="submit">Подписаться</button>
+        </form>
+        <div class="footer__social">
+          <a href="#" class="social-link" aria-label="ВКонтакте">
+            <img src="image/vk.svg" alt="VK" />
+          </a>
+          <a href="#" class="social-link" aria-label="Telegram">
+            <img src="image/tg.svg" alt="Telegram" />
+          </a>
+          <a href="#" class="social-link" aria-label="Email">
+            <img src="image/sms.svg" alt="SMS" />
+          </a>
         </div>
-      </form>
+      </div>
     </div>
   </footer>
 
