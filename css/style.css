@@ -207,31 +207,31 @@ section:last-of-type {
 }
 .card1 {
   left: 8%;
-  bottom: 55%;
+  bottom: 54%;
   transform: rotate(-8deg);
   z-index: 2;
 }
 .card2 {
-  left: 28%;
-  bottom: 52%;
+  left: 27%;
+  bottom: 51%;
   transform: rotate(6deg);
   z-index: 2;
 }
 .card3 {
   left: 42%;
-  bottom: 30%;
-  transform: rotate(12deg);
+  bottom: 29%;
+  transform: rotate(7deg);
   z-index: 4;
 }
 .card4 {
-  left: 61%;
-  bottom: 45%;
+  left: 61%;           /* ← теперь левее, чем card5 (у которой 79%) */
+  bottom: 44%;
   transform: rotate(-5deg);
-  z-index: 2;
+  z-index: 2;          /* ← теперь на одном уровне с card1, card2 */
 }
 .card5 {
   left: 79%;
-  bottom: 35%;
+  bottom: 34%;
   transform: rotate(4deg);
   z-index: 4;
 }
