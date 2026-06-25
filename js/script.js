@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSlider() {
       if (cards.length === 0) return;
       const cardWidth = cards[0].offsetWidth || 200;
-      const gap = 24; // соответствует gap в .slider-track
+      const gap = 24;
       const offset = currentIndex * (cardWidth + gap);
       track.style.transform = `translateX(-${offset}px)`;
     }
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
       updateVisibleCards();
     });
 
-    // Инициализация
     setTimeout(() => {
       updateVisibleCards();
       updateSlider();
@@ -87,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  // Открыть первую папку по умолчанию
   const firstContent = document.querySelector('.tools-content');
   if (firstContent) firstContent.classList.add('active');
 
