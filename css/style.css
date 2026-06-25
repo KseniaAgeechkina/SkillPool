@@ -544,7 +544,7 @@ section:last-of-type {
 
 .stats__number {
   font-size: 128px;
-  font-weight: 500;
+  font-weight: 600;
   color: #0B148E;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -617,35 +617,69 @@ section:last-of-type {
   color: #1a2a4a;
 }
 
-/* ========== СВЯЗЬ (УТОЧКА) ========== */
+/* ========== СВЯЗЬ (УТОЧКА) – ОБНОВЛЁННЫЙ БЛОК ========== */
 .contact-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
   flex-wrap: wrap;
 }
-.contact-duck {
-  flex: 0 0 200px;
+
+.contact-text {
+  flex: 1 1 400px;
 }
+
+.contact-text h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #0a1e3c;
+  margin: 0 0 56px 0;
+  line-height: 1.2;
+}
+
+.contact-text p {
+  font-size: 24px;
+  color: #3a4a6a;
+  margin: 0 0 56px 0;
+  line-height: 1.5;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #3842D2;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(56, 66, 210, 0.3);
+}
+
+.btn-contact:hover {
+  background: #666FEB;
+  box-shadow: 0 8px 24px rgba(102, 111, 235, 0.4);
+  transform: scale(1.02);
+}
+
+.btn-contact:active {
+  background: #0B148E;
+  transform: scale(0.96);
+}
+
+.contact-duck {
+  flex: 0 0 auto;
+}
+
 .duck-animated {
-  width: 100%;
+  display: block;
   animation: swim 3s ease-in-out infinite alternate;
 }
+
 @keyframes swim {
   0% { transform: translateY(0) rotate(-3deg); }
   100% { transform: translateY(-16px) rotate(3deg); }
-}
-.contact-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0a1e3c;
-  margin-bottom: 16px;
-  line-height: 1.2;
-}
-.contact-text p {
-  font-size: 1.1rem;
-  color: #3a4a6a;
-  margin-bottom: 24px;
 }
 
 /* ========== ПОДВАЛ ========== */
@@ -680,7 +714,7 @@ section:last-of-type {
   color: #B9D3ED;
   opacity: 0.8;
   margin: 0;
-  margin-top:280px;
+  margin-top: 280px;
 }
 
 .footer__right {
@@ -688,7 +722,7 @@ section:last-of-type {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  padding-top: 128px;   /* сдвиг вниз на 8px относительно логотипа */
+  padding-top: 128px;
 }
 
 .footer__title {
@@ -904,7 +938,19 @@ section:last-of-type {
   .stats__number { font-size: 96px; }
   .stats__item p { font-size: 20px; }
 
-  .contact-container { flex-direction: column; text-align: center; }
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-text h2 {
+    font-size: 36px;
+  }
+  .contact-text p {
+    font-size: 1rem;
+  }
+  .btn-contact {
+    padding: 12px 28px;
+  }
 
   .footer__inner {
     flex-direction: column;
@@ -990,6 +1036,18 @@ section:last-of-type {
   .stats-title { font-size: 24px; }
   .stats__number { font-size: 56px; }
   .stats__item p { font-size: 16px; }
+
+  .contact-text h2 {
+    font-size: 28px;
+  }
+  .contact-text p {
+    font-size: 0.95rem;
+  }
+  .btn-contact {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
   .footer__title { font-size: 20px; }
   .footer__desc { font-size: 13px; }
 
