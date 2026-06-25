@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillPool – Промо-сайт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="image/logo.svg" alt="SkillPool" class="logo__img" />
+        <span class="logo__text">SkillPool</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#mission">Миссия</a></li>
+          <li><a href="#growth">Рост</a></li>
+          <li><a href="#stats">Статистика</a></li>
+          <li><a href="#tools">Инструменты</a></li>
+          <li><a href="#contact">Связь</a></li>
+        </ul>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- БЛОК 1: ГЕРОЙ (МИССИЯ) -->
+    <section class="hero" id="mission">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Твой первый заказ<br />ближе, чем кажется</h1>
+          <p class="hero__subtitle">
+            Развивайте навыки на реальных кейсах,<br />
+            получайте поддержку и двигайтесь вперёд.
+          </p>
+          <a href="#" class="btn btn-primary">Скачать PDF</a>
+        </div>
+      </div>
+
+      <!-- Волны + хаотичные карточки -->
+      <div class="waves-wrapper">
+        <!-- Задняя волна -->
+        <div class="wave-layer wave-layer--back">
+          <img src="image/wave1.svg" alt="Волна" />
+        </div>
+
+        <!-- 5 карточек с разным наклоном и позицией -->
+        <div class="wave-card card1">Дизайн</div>
+        <div class="wave-card card2">Кейсы</div>
+        <div class="wave-card card3">ИИ-бот</div>
+        <div class="wave-card card4">Тесты</div>
+        <div class="wave-card card5">Дедлайн</div>
+
+        <!-- Средняя волна -->
+        <div class="wave-layer wave-layer--middle">
+          <img src="image/wave2.svg" alt="Волна" />
+        </div>
+
+        <!-- Передняя волна -->
+        <div class="wave-layer wave-layer--front">
+          <img src="image/wave3.svg" alt="Волна" />
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 2: МИССИЯ (фон #0B148E) -->
+    <section class="mission-block" id="growth">
+      <div class="container">
+        <h2 class="mission-title">Застряли между обучением и реальной работой?</h2>
+        <p class="mission-subtitle">Переход от учебных проектов к реальным клиентам часто кажется слишком резким.</p>
+        <p class="mission-subtitle mission-subtitle--accent">СкиллПулл делает этот путь понятным!!</p>
+
+        <div class="mission-cards">
+          <!-- Карточка 1 (открытая) -->
+          <div class="flip-card mission-flip">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <h3>Чёткий маршрут от теории к первым кейсам</h3>
+                <p>Пошаговый путь от первых шагов и подсказок до уверенного владения навыками.</p>
+              </div>
+              <div class="flip-card__back" style="background-image: url('image/pattern.png');"></div>
+            </div>
+          </div>
+          <!-- Карточка 2 (закрытая, с паттерном) -->
+          <div class="flip-card mission-flip flip-card--flipped">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <h3>Чёткий маршрут от теории к первым кейсам</h3>
+                <p>Пошаговый путь от первых шагов и подсказок до уверенного владения навыками.</p>
+              </div>
+              <div class="flip-card__back" style="background-image: url('image/pattern.png');"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 3: РОСТ -->
+    <section class="growth-block" id="growth-detail">
+      <div class="container">
+        <h2 class="section-title">Растите как настоящий дизайнер – шаг за шагом</h2>
+        <p class="section-desc">Без хаоса, случайных туртировок и выгорания.</p>
+        <div class="growth-grid">
+          <div class="growth-item">
+            <h3>Четкие сроки в комфорте</h3>
+            <p>Найдите свои слабые места</p>
+          </div>
+          <div class="growth-item">
+            <h3>Только самые нужные знания</h3>
+            <p>Тренируйтесь без риска</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 4: СТАТИСТИКА -->
+    <section class="stats" id="stats">
+      <div class="container stats__grid">
+        <div class="stats__item">
+          <span class="stats__number">97%</span>
+          <p>Столько дизайнеров начинают понимать, почему их работы выглядят непрофессионально</p>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">50+</span>
+          <p>Реальных кейсов для тренировки. Практика на живых задачах. Рост навыков без лишних слов.</p>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">24/7</span>
+          <p>ИИ-помощник всегда на связи, получите мгновенный фидбэк, когда вам это нужно.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 5: ИНСТРУМЕНТЫ (аккордеон) -->
+    <section class="tools" id="tools">
+      <div class="container">
+        <h2 class="section-title">Все, что нужно для работы в твоём приложении</h2>
+        <div class="tools__grid">
+          <div class="tools-item" data-target="folder1">
+            <span class="tools-icon">🤖</span>
+            <h3>ИИ чат</h3>
+            <p class="tools-preview">Мгновенные ответы</p>
+          </div>
+          <div class="tools-item" data-target="folder2">
+            <span class="tools-icon">📝</span>
+            <h3>Тесты</h3>
+            <p class="tools-preview">Проверка знаний</p>
+          </div>
+          <div class="tools-item" data-target="folder3">
+            <span class="tools-icon">⏰</span>
+            <h3>Дедлайн</h3>
+            <p class="tools-preview">Управление временем</p>
+          </div>
+          <div class="tools-item" data-target="folder4">
+            <span class="tools-icon">💡</span>
+            <h3>Фидбэк</h3>
+            <p class="tools-preview">Рекомендации по композиции, цвету, типографике</p>
+          </div>
+        </div>
+        <div class="tools__content">
+          <div id="folder1" class="tools-content">
+            <h4>ИИ-чат</h4>
+            <p>Получайте быстрые рекомендации по композиции, цвету, типографике и визуальной иерархии. Искусственный интеллект помогает выявить слабые места и улучшить работу ещё до сдачи.</p>
+          </div>
+          <div id="folder2" class="tools-content">
+            <h4>Тесты</h4>
+            <p>Интерактивные тесты для проверки знаний по теории дизайна. Отслеживайте свой прогресс и закрывайте пробелы.</p>
+          </div>
+          <div id="folder3" class="tools-content">
+            <h4>Дедлайн</h4>
+            <p>Чёткие сроки в комфорте. Планируйте свои проекты и сдавайте работы вовремя без стресса.</p>
+          </div>
+          <div id="folder4" class="tools-content">
+            <h4>Фидбэк</h4>
+            <p>Развёрнутая обратная связь по вашим работам. Улучшайте каждый проект с нашими подсказками.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 6: СВЯЗЬ (уточка) -->
+    <section class="contact" id="contact">
+      <div class="container contact-container">
+        <div class="contact-duck">
+          <img src="image/duck.png" alt="Уточка" class="duck-animated" />
+        </div>
+        <div class="contact-text">
+          <h2>Начни свой путь в дизайне уже сейчас</h2>
+          <p>Практика. Поддержка. Первые проекты. Все в одном приложении.</p>
+          <a href="#" class="btn btn-primary">Скачать PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p>© 2026 SkillPool. Все права защищены.</p>
+        <p>Оставляйте свою почту! Будем делиться крутыми кейсами, лайфхаками и новостями. Без спама.</p>
+      </div>
+      <form class="footer__form" id="subscribeForm">
+        <label for="email">Ваш имейл адрес:</label>
+        <div class="form-row">
+          <input type="email" id="email" placeholder="example@mail.com" required />
+          <button type="submit">Подписаться</button>
+        </div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
