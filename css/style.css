@@ -53,11 +53,6 @@ section:last-of-type {
 .logo__img {
   height: 40px;
 }
-.logo__text {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: #000D1A;
-}
 .nav__list {
   display: flex;
   gap: 32px;
@@ -110,13 +105,13 @@ section:last-of-type {
 /* ========== ГЕРОЙ ========== */
 .hero {
   position: relative;
-  padding-top: 40px;
+  padding-top: 80px;
   background: linear-gradient(180deg, #eef5ff 0%, #ffffff 100%);
   overflow: hidden;
 }
 .hero__content {
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 8px;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -134,8 +129,6 @@ section:last-of-type {
   margin-bottom: 30px;
   line-height: 1.5;
 }
-
-/* Кнопка */
 .btn-primary {
   display: inline-block;
   padding: 14px 36px;
@@ -164,7 +157,44 @@ section:last-of-type {
   100% { transform: rotate(0deg); }
 }
 
-/* ========== ВОЛНЫ И КАРТОЧКИ ========== */
+/* ===== ЭФФЕКТ ДЛЯ СЛОВА "Твой" (овал) ===== */
+.hero__word {
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 0 6px;
+  line-height: 1.2;
+}
+.hero__title:hover .hero__word {
+  border-color: #B9D3ED;
+  box-shadow: 0 0 12px rgba(185, 211, 237, 0.4);
+  transform: scale(1.05);
+}
+
+/* ===== ОБВОДКА ДЛЯ СЛОВА "ближе" (SVG) ===== */
+.hero__word-outline {
+  position: relative;
+  display: inline-block;
+}
+.hero__outline-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 130%;
+  height: 130%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.hero__title:hover .hero__outline-img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ========== ВОЛНЫ ========== */
 .waves-wrapper {
   position: relative;
   width: 100vw;
@@ -244,29 +274,69 @@ section:last-of-type {
   box-shadow: 0 16px 40px rgba(11, 20, 142, 0.3);
 }
 
-/* ========== БЛОК МИССИИ (фон #0B148E) ========== */
+/* ========== БЛОК МИССИИ ========== */
 .mission-block {
   background: #0B148E;
   color: white;
 }
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+.mission-left {
+  display: flex;
+  flex-direction: column;
+}
 .mission-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 56px;
+  color: #ffffff;
 }
 .mission-subtitle {
-  font-size: 1.2rem;
+  font-size: 24px;
+  font-weight: 400;
   opacity: 0.9;
   max-width: 700px;
-  margin-bottom: 8px;
+  margin: 0;
 }
-.mission-subtitle--accent {
+.mission-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+}
+.mission-accent {
   font-weight: 600;
   font-size: 1.3rem;
-  margin-top: 12px;
   opacity: 1;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  cursor: default;
 }
+.mission-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 Q10,0 20,10 T40,10 T60,10 T80,10 T100,10 T120,10' stroke='%23B9D3ED' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.mission-accent:hover::after {
+  width: 100%;
+}
+
+/* ===== КАРТОЧКИ ===== */
 .mission-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -295,12 +365,35 @@ section:last-of-type {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   background: white;
   color: #1a1a2e;
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 .mission-flip .flip-card__front {
   background: #ffffff;
+}
+.mission-flip .flip-card__front h3 {
+  color: #0B148E;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+.card-divider {
+  width: 100%;
+  max-width: 200px;
+  height: 4px;
+  background: #B9D3ED;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+.card-description {
+  font-size: 1rem;
+  color: #3a4a6a;
+  margin: 0;
+  line-height: 1.5;
 }
 .mission-flip .flip-card__back {
   transform: rotateY(180deg);
@@ -312,14 +405,6 @@ section:last-of-type {
 .mission-flip .flip-card__back p {
   display: none;
 }
-.mission-flip .flip-card__front h3 {
-  color: #0B148E;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-}
-.mission-flip .flip-card__front p {
-  color: #3a4a6a;
-}
 .flip-card--flipped .flip-card__inner {
   transform: rotateY(180deg);
 }
@@ -330,7 +415,7 @@ section:last-of-type {
   transform: rotateY(0deg);
 }
 
-/* ========== БЛОК РОСТА ========== */
+/* ========== ОСТАЛЬНЫЕ БЛОКИ ========== */
 .growth-block {
   background: #ffffff;
 }
@@ -364,7 +449,6 @@ section:last-of-type {
   color: #0077ff;
 }
 
-/* ========== СТАТИСТИКА ========== */
 .stats__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -383,7 +467,6 @@ section:last-of-type {
   font-size: 1rem;
 }
 
-/* ========== ИНСТРУМЕНТЫ (АККОРДЕОН) ========== */
 .tools__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -442,7 +525,6 @@ section:last-of-type {
   color: #1a2a4a;
 }
 
-/* ========== СВЯЗЬ (УТОЧКА) ========== */
 .contact-container {
   display: flex;
   align-items: center;
@@ -473,7 +555,6 @@ section:last-of-type {
   margin-bottom: 24px;
 }
 
-/* ========== ПОДВАЛ ========== */
 .footer {
   background: #0a1e3c;
   color: #c0d0e8;
@@ -524,8 +605,6 @@ section:last-of-type {
 }
 
 /* ========== АДАПТИВ ========== */
-
-/* БОЛЬШИЕ ЭКРАНЫ (1366px) – лёгкое смещение вниз */
 @media (max-width: 1366px) {
   .container { max-width: 1100px; }
   .card1 { transform: translateY(35px) rotate(-8deg); }
@@ -535,7 +614,6 @@ section:last-of-type {
   .card5 { transform: translateY(30px) rotate(4deg); }
 }
 
-/* СРЕДНИЕ (1194px) – больше смещение */
 @media (max-width: 1194px) {
   .mission-cards { grid-template-columns: 1fr 1fr; }
   .card1 { transform: translateY(50px) rotate(-8deg); }
@@ -545,7 +623,6 @@ section:last-of-type {
   .card5 { transform: translateY(40px) rotate(4deg); }
 }
 
-/* ПЛАНШЕТЫ (834px) – ещё ниже */
 @media (max-width: 834px) {
   .nav {
     display: none;
@@ -575,13 +652,34 @@ section:last-of-type {
   .card4 { transform: translateY(70px) rotate(-5deg); }
   .card5 { transform: translateY(70px) rotate(4deg); }
 
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .mission-right {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .mission-title {
+    font-size: 36px;
+  }
+  .mission-subtitle {
+    font-size: 20px;
+  }
+
+  .mission-flip .flip-card__front h3 {
+    font-size: 1.4rem;
+  }
+  .card-description {
+    font-size: 0.95rem;
+  }
+
   .mission-cards { grid-template-columns: 1fr; }
   .contact-container { flex-direction: column; text-align: center; }
   .footer__inner { flex-direction: column; align-items: center; text-align: center; }
   .form-row { justify-content: center; }
 }
 
-/* МАЛЕНЬКИЕ (600px) – ещё глубже */
 @media (max-width: 600px) {
   .wave-card {
     font-size: 0.85rem;
@@ -594,7 +692,6 @@ section:last-of-type {
   .card5 { transform: translateY(90px) rotate(4deg); }
 }
 
-/* САМЫЕ МАЛЕНЬКИЕ (375px) – максимальное опускание */
 @media (max-width: 375px) {
   .container { padding: 0 16px; }
   .hero__title { font-size: 2rem; }
@@ -608,6 +705,20 @@ section:last-of-type {
   .card3 { transform: translateY(90px) rotate(7deg); }
   .card4 { transform: translateY(100px) rotate(-5deg); }
   .card5 { transform: translateY(100px) rotate(4deg); }
+
+  .mission-title {
+    font-size: 28px;
+  }
+  .mission-subtitle {
+    font-size: 18px;
+  }
+
+  .mission-flip .flip-card__front h3 {
+    font-size: 1.2rem;
+  }
+  .card-description {
+    font-size: 0.85rem;
+  }
 
   .stats__grid { grid-template-columns: 1fr; }
   .tools__grid { grid-template-columns: 1fr 1fr; }
