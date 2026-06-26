@@ -17,8 +17,8 @@
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="#mission">Миссия</a></li>
-          <li><a href="#growth">Рост</a></li>
+          <li><a href="#growth">Миссия</a></li>
+          <li><a href="#growth-detail">Рост</a></li>
           <li><a href="#stats">Статистика</a></li>
           <li><a href="#tools">Инструменты</a></li>
           <li><a href="#contact">Связь</a></li>
@@ -181,52 +181,56 @@
       </div>
     </section>
 
-    <!-- ИНСТРУМЕНТЫ -->
-    <section class="tools" id="tools">
-      <div class="container">
-        <h2 class="section-title">Все, что нужно для работы в твоём приложении</h2>
-        <div class="tools__grid">
-          <div class="tools-item" data-target="folder1">
-            <span class="tools-icon">🤖</span>
-            <h3>ИИ чат</h3>
-            <p class="tools-preview">Мгновенные ответы</p>
-          </div>
-          <div class="tools-item" data-target="folder2">
-            <span class="tools-icon">📝</span>
-            <h3>Тесты</h3>
-            <p class="tools-preview">Проверка знаний</p>
-          </div>
-          <div class="tools-item" data-target="folder3">
-            <span class="tools-icon">⏰</span>
-            <h3>Дедлайн</h3>
-            <p class="tools-preview">Управление временем</p>
-          </div>
-          <div class="tools-item" data-target="folder4">
-            <span class="tools-icon">💡</span>
-            <h3>Фидбэк</h3>
-            <p class="tools-preview">Рекомендации по композиции, цвету, типографике</p>
+<!-- ИНСТРУМЕНТЫ (папки с кнопками на язычке) -->
+<section class="tools" id="tools">
+  <div class="container">
+    <h2 class="section-title">Все, что нужно для работы<br />в твоём приложении!!</h2>
+
+    <div class="tools__wrapper">
+      <div class="folders-stack">
+        <!-- Кнопки-переключатели (поверх папок, на язычке) -->
+        <div class="tools__tabs">
+          <button class="tab-btn active" data-target="folder1">ИИ-бот</button>
+          <button class="tab-btn" data-target="folder2">Тесты</button>
+          <button class="tab-btn" data-target="folder3">Дедлайн</button>
+        </div>
+
+        <!-- Папка 1: ИИ-бот -->
+        <div id="folder1" class="folder-item active">
+          <div class="folder-card">
+            <img src="image/folder-ai.svg" alt="ИИ-бот" class="folder-img" />
+            <div class="folder-overlay">
+              <h4>Фидбек, когда он нужен</h4>
+              <p>Получайте быстрые рекомендации <br />по композиции, цвету, типографике <br />и визуальной иерархии. <br />Искусственный интеллект помогает <br />выявить слабые места и улучшить<br /> работу ещё до сдачи.</p>
+            </div>
           </div>
         </div>
-        <div class="tools__content">
-          <div id="folder1" class="tools-content">
-            <h4>ИИ-чат</h4>
-            <p>Получайте быстрые рекомендации по композиции, цвету, типографике и визуальной иерархии. Искусственный интеллект помогает выявить слабые места и улучшить работу ещё до сдачи.</p>
+
+        <!-- Папка 2: Тесты -->
+        <div id="folder2" class="folder-item">
+          <div class="folder-card">
+            <img src="image/folder-tests.svg" alt="Тесты" class="folder-img" />
+            <div class="folder-overlay">
+              <h4>Оцените себя за пару минут</h4>
+              <p>Не знаете, с чего начать развитие? <br />Пройдите тест, он оценит ваш уровень <br />и выделит конкретные навыки, которые стоит<br /> подтянуть. Вы получите план действий, <br />чтобы уверенно двигаться вперёд, <br />даже если только начинаете путь в профессии.</p>
+            </div>
           </div>
-          <div id="folder2" class="tools-content">
-            <h4>Тесты</h4>
-            <p>Интерактивные тесты для проверки знаний по теории дизайна. Отслеживайте свой прогресс и закрывайте пробелы.</p>
-          </div>
-          <div id="folder3" class="tools-content">
-            <h4>Дедлайн</h4>
-            <p>Чёткие сроки в комфорте. Планируйте свои проекты и сдавайте работы вовремя без стресса.</p>
-          </div>
-          <div id="folder4" class="tools-content">
-            <h4>Фидбэк</h4>
-            <p>Развёрнутая обратная связь по вашим работам. Улучшайте каждый проект с нашими подсказками.</p>
+        </div>
+
+        <!-- Папка 3: Дедлайн -->
+        <div id="folder3" class="folder-item">
+          <div class="folder-card">
+            <img src="image/folder-deadline.svg" alt="Дедлайн" class="folder-img" />
+            <div class="folder-overlay">
+              <h4>Дедлайны, которые работают</h4>
+              <p>С нашими дедлайнами вы всегда знаете,<br /> что и когда нужно сделать. <br />Разбиваем проект на этапы, расставляем<br /> приоритеты и следим, чтобы вы укладывались<br /> в график, так работа идёт быстрее,<br /> а результат качественнее.</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- СВЯЗЬ (уточка) – обновлённый блок -->
     <section class="contact" id="contact">
