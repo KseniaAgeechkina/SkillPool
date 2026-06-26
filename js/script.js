@@ -1,17 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // ===== БУРГЕР-МЕНЮ =====
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
-  if (burger && nav) {
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-    document.querySelectorAll('.nav__list a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-      });
-    });
-  }
+// ===== БУРГЕР-МЕНЮ =====
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+burger.addEventListener('click', function() {
+  // Переключаем видимость меню
+  nav.classList.toggle('open');
+  // Переключаем анимацию бургера (крестик)
+  burger.classList.toggle('open');
+  // Блокируем прокрутку страницы при открытом меню
+  document.body.classList.toggle('menu-open');
+});
+
+// Закрываем меню при клике на ссылку
+document.querySelectorAll('.nav__list a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  });
+});
 
   // ===== СЛАЙДЕР В БЛОКЕ РОСТА =====
   const track = document.getElementById('growthSliderTrack');
@@ -102,3 +110,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+// ===== ПЕРЕКЛЮЧЕНИЕ ПАПОК =====
+const tabBtns = document.querySelectorAll('.tab-btn');
+const folderItems = document.querySelectorAll('.folder-item');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const targetId = this.dataset.target;
+
+    // Убираем активный класс у всех кнопок
+    tabBtns.forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+
+    // Скрываем все папки
+    folderItems.forEach(f => f.classList.remove('active'));
+
+    // Показываем нужную папку
+    const targetFolder = document.getElementById(targetId);
+    if (targetFolder) {
+      targetFolder.classList.add('active');
+    }
+  });
+});
+
+// По умолчанию активна первая папка (уже есть класс active)
